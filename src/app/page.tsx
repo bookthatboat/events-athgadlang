@@ -63,16 +63,16 @@ export default function Home() {
       <section className="relative bg-secondary py-24 px-6">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            The Minds Behind <span className="text-accent">the Numbers</span>
+            The Minds <span className="text-accent">Behind The Numbers</span>
             <span className="block text-3xl md:text-4xl text-light mt-6">
               Meet the athGADLANG Team @ Accountex 2025
             </span>
           </h1>
           <p className="text-light text-xl mb-12 max-w-3xl mx-auto">
-            Accounting expertise meets innovation. Let&apos;s turn conversations
-            into lasting solutions.
+            Accounting expertise meets innovation. <br /> Let&apos;s turn
+            conversations into lasting solutions.
           </p>
-          <button className="bg-primary hover:bg-accent text-white font-bold py-4 px-12 rounded-full transition-all duration-300 hover:scale-105">
+          <button className="bg-primary hover:bg-accent text-white font-bold py-4 px-12 rounded-full transition-all duration-300 hover:scale-105 uppercase">
             Book a Meeting With Our Team ➜
           </button>
         </div>
@@ -81,9 +81,14 @@ export default function Home() {
       {/* Team Grid */}
       <section className="py-24 px-6 bg-gradient-to-br from-[#e2ecf6] to-[#f0f4f8]">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-secondary mb-16">
-            Meet Our <span className="text-primary">Strategic Leaders</span>
+          <h2 className="text-4xl font-bold text-center text-secondary mb-2">
+            Meet Our Strategic Leaders
           </h2>
+
+          <p className="text-lg text-secondary max-w-2xl mx-auto text-center mb-16">
+            These Are the Faces You've Met at Accountex. Now Let's Take It
+            Further
+          </p>
 
           {/* Flexbox for Centered Last Row */}
           <div className="flex flex-wrap justify-center gap-10">
@@ -119,7 +124,7 @@ export default function Home() {
                 <h3 className="text-xl font-bold text-center mb-1">
                   {member.name}
                 </h3>
-                <p className="text-accent text-sm text-center mb-4">
+                <p className="text-white text-sm text-center mb-4">
                   {member.role}
                 </p>
 
@@ -129,7 +134,7 @@ export default function Home() {
                     href={member.link || "#"}
                     target="_blank"
                     rel="noopener"
-                    className="inline-block bg-accent text-primary hover:bg-secondary hover:text-white font-bold px-6 py-2 rounded-full text-sm transition-all duration-300"
+                    className="inline-block bg-white text-secondary hover:bg-secondary hover:text-white font-bold px-6 py-2 rounded-full text-sm transition-all duration-300"
                   >
                     Book a Meeting
                   </a>
@@ -153,9 +158,9 @@ export default function Home() {
 
             <p className="text-lg text-secondary mb-10 max-w-xl mx-auto text-center">
               At <span className="font-bold text-primary">athGADLANG</span>, we
-              blend industry expertise with personalized strategies to elevate
-              your business. Precision, people-first mindset, and future-focused
-              planning are our core.
+              bring together deep industry knowledge, precision, and a
+              people-first approach. Our services are tailored to empower
+              businesses like yours with:
             </p>
 
             {/* Modified Services Grid */}
@@ -178,7 +183,10 @@ export default function Home() {
 
                     {/* Service Text */}
                     <p className="text-secondary text-md font-medium leading-relaxed">
-                      {service}
+                      <span className="font-bold">
+                        {service.split(":")[0]}:
+                      </span>
+                      {service.split(":").slice(1).join(":")}
                     </p>
                   </div>
                 </div>
@@ -192,23 +200,19 @@ export default function Home() {
       <section className="bg-primary py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-3xl font-bold text-white mb-8">
-            These Are the Faces You&apos;ve Met at Accountex.
-            <br />
-            Now Let&apos;s Take It Further
+            Let us know who you&apos;d like to continue the <br /> conversation
+            with - we&apos;d love to connect again.
           </h3>
           <a
             href="https://www.linkedin.com/company/athgadlang/"
             target="_blank"
             rel="noopener"
-            className="inline-flex items-center bg-accent hover:bg-secondary text-primary hover:text-white px-12 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center bg-secondary hover:bg-secondary text-white hover:text-white px-12 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105"
           >
             <LinkedinIcon className="w-6 h-6 mr-3" />
             Let&apos;s Build Something Together
           </a>
-          <p className="text-light mt-8">
-            Let us know who you&apos;d like to continue the conversation with -
-            we&apos;d love to connect again.
-          </p>
+          <p className="text-light mt-8"></p>
         </div>
       </section>
     </main>
