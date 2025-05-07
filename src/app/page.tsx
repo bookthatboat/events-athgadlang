@@ -73,7 +73,7 @@ export default function Home() {
             conversations into lasting solutions.
           </p>
           <button className="bg-primary hover:bg-accent text-white font-bold py-4 px-12 rounded-full transition-all duration-300 hover:scale-105 uppercase">
-            Book a Meeting With Our Team ➜
+            Book a Meeting With Our Team
           </button>
         </div>
       </section>
@@ -86,8 +86,8 @@ export default function Home() {
           </h2>
 
           <p className="text-lg text-secondary max-w-2xl mx-auto text-center mb-16">
-            These Are the Faces You've Met at Accountex. Now Let's Take It
-            Further
+            These Are the Faces You&apos;ve Met at Accountex. Now Let&apos;s
+            Take It Further
           </p>
 
           {/* Flexbox for Centered Last Row */}
