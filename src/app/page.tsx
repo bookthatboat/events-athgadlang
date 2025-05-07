@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { LinkedinIcon } from "lucide-react";
 
@@ -43,6 +45,16 @@ const services = [
 ];
 
 export default function Home() {
+  const handleScrollToLeaders = () => {
+    const element = document.getElementById("strategic-leaders");
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
@@ -72,14 +84,20 @@ export default function Home() {
             Accounting expertise meets innovation. <br /> Let&apos;s turn
             conversations into lasting solutions.
           </p>
-          <button className="bg-primary hover:bg-accent text-white font-bold py-4 px-12 rounded-full transition-all duration-300 hover:scale-105 uppercase">
+          <button
+            onClick={handleScrollToLeaders}
+            className="bg-primary hover:bg-accent text-white font-bold py-4 px-12 rounded-full transition-all duration-300 hover:scale-105 uppercase"
+          >
             Book a Meeting With Our Team
           </button>
         </div>
       </section>
 
       {/* Team Grid */}
-      <section className="py-24 px-6 bg-gradient-to-br from-[#e2ecf6] to-[#f0f4f8]">
+      <section
+        id="strategic-leaders"
+        className="py-24 px-6 bg-gradient-to-br from-[#e2ecf6] to-[#f0f4f8]"
+      >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-secondary mb-2">
             Meet Our Strategic Leaders
