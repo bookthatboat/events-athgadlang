@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased bg-white;
+  }
+}
+
+@layer components {
+  .service-bullet {
+    @apply w-6 h-6 bg-accent rounded-full flex items-center justify-center text-secondary font-bold;
+  }
+}
+
+@layer utilities {
+  .leading-snug { line-height: 1.375; }
+  .leading-relaxed { line-height: 1.625; }
+}
