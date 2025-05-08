@@ -74,19 +74,19 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative bg-secondary py-24 px-6">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
             The Minds <span className="text-accent">Behind The Numbers</span>
-            <span className="block text-3xl md:text-4xl text-light mt-6">
+            <span className="block text-3xl md:text-2xl text-light mt-6">
               Meet the athGADLANG Team @ Accountex 2025
             </span>
           </h1>
-          <p className="text-light text-xl mb-12 max-w-3xl mx-auto">
+          <p className="text-light text-lg md:text-xl mb-8 max-w-2xl mx-auto">
             Accounting expertise meets innovation. <br /> Let&apos;s turn
             conversations into lasting solutions.
           </p>
           <button
             onClick={handleScrollToLeaders}
-            className="bg-primary hover:bg-accent text-white font-bold py-4 px-12 rounded-full transition-all duration-300 hover:scale-105 uppercase"
+            className="bg-white text-secondary hover:bg-accent font-bold py-4 px-12 rounded-full transition-all duration-300 hover:scale-105 uppercase text-xs md:text-sm"
           >
             Book a Meeting With Our Team
           </button>
@@ -96,30 +96,35 @@ export default function Home() {
       {/* Team Grid */}
       <section
         id="strategic-leaders"
-        className="py-24 px-6 bg-gradient-to-br from-[#e2ecf6] to-[#f0f4f8]"
+        className="pt-20 px-6 bg-gradient-to-br from-[#e2ecf6] to-[#f0f4f8]"
       >
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-secondary mb-2">
+          <h2 className="text-4xl md:text-3xl font-bold text-center text-secondary mb-2">
             Meet Our Strategic Leaders
           </h2>
 
-          <p className="text-lg text-secondary max-w-2xl mx-auto text-center mb-16">
+          <p className="text-lg md:text-base text-secondary max-w-2xl mx-auto text-center mb-8">
             These Are the Faces You&apos;ve Met at Accountex. Now Let&apos;s
-            Take It Further
+            Take It Further.
           </p>
 
-          {/* Flexbox for Centered Last Row */}
-          <div className="flex flex-wrap justify-center gap-10">
+          <div
+            className="flex flex-wrap justify-center gap-8"
+            style={{
+              transform: "scale(0.90)",
+              transformOrigin: "top center",
+            }}
+          >
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className="relative w-full max-w-xs bg-[#102a43] text-white rounded-3xl pb-10 pt-6 px-4 shadow-lg"
+                className="relative w-full max-w-xs rounded-3xl pb-8 pt-4 px-4 shadow-lg hover:shadow-xl transition-all"
                 style={{
                   clipPath: "polygon(0 0, 100% 0, 100% 92%, 52% 100%, 0 92%)",
                 }}
               >
-                {/* Angled Banner Text */}
-                <div className="absolute top-4 left-4 bg-primary backdrop-blur-sm px-3 py-1 rotate-[-10deg] text-xs font-semibold rounded z-10">
+                {/* Angled Banner Text (Original Style) */}
+                <div className="absolute top-9 left-4 bg-primary/70 backdrop-blur-sm px-3 py-1 rotate-[-10deg] text-xs font-semibold rounded z-10 text-white">
                   {index === 0 && "Growing future leaders"}
                   {index === 1 && "Reigniting the passion"}
                   {index === 2 && "Improving the culture"}
@@ -127,34 +132,34 @@ export default function Home() {
                   {index === 4 && "Leading with impact"}
                 </div>
 
-                {/* Image */}
+                {/* Image Container */}
                 <div className="overflow-hidden rounded-xl mb-4">
                   <Image
                     src={member.image}
                     alt={member.name}
                     width={300}
                     height={400}
-                    className="w-full h-72 object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                    className="w-full object-cover transition-all duration-500"
                   />
                 </div>
 
                 {/* Info */}
-                <h3 className="text-xl font-bold text-center mb-1">
-                  {member.name}
-                </h3>
-                <p className="text-white text-sm text-center mb-4">
-                  {member.role}
-                </p>
+                <div className="text-center">
+                  <h3 className="text-xl font-bold text-secondary mb-1">
+                    {member.name}
+                  </h3>
+                  <p className="text-secondary text-sm mb-4">{member.role}</p>
+                </div>
 
-                {/* Book Meeting Button */}
+                {/* Book Meeting Button (Original Colors) */}
                 <div className="text-center">
                   <a
                     href={member.link || "#"}
                     target="_blank"
                     rel="noopener"
-                    className="inline-block bg-white text-secondary hover:bg-secondary hover:text-white font-bold px-6 py-2 rounded-full text-sm transition-all duration-300"
+                    className="inline-block bg-secondary text-white hover:bg-primary hover:text-white font-bold px-6 py-2 rounded-full text-sm transition-all duration-300"
                   >
-                    Book a Meeting
+                    Book A Meeting
                   </a>
                 </div>
               </div>
@@ -164,17 +169,17 @@ export default function Home() {
       </section>
 
       {/* Strategic Partners Section */}
-      <section className="py-28 px-6 bg-white">
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-5xl mx-auto grid md:grid-cols-1 gap-20 items-center justify-center">
           <div>
-            <h2 className="text-5xl font-extrabold text-secondary leading-tight mb-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-secondary leading-tight mb-6 text-center">
               More Than Accountants.{" "}
               <span className="block text-primary">
                 We&apos;re Your Strategic Partners.
               </span>
             </h2>
 
-            <p className="text-lg text-secondary mb-10 max-w-xl mx-auto text-center">
+            <p className="text-lg md:text-base text-secondary mb-10 max-w-xl mx-auto text-center">
               At <span className="font-bold text-primary">athGADLANG</span>, we
               bring together deep industry knowledge, precision, and a
               people-first approach. Our services are tailored to empower
@@ -200,7 +205,7 @@ export default function Home() {
                     </div>
 
                     {/* Service Text */}
-                    <p className="text-secondary text-md font-medium leading-relaxed">
+                    <p className="text-secondary text-md md:text-sm font-medium leading-relaxed">
                       <span className="font-bold">
                         {service.split(":")[0]}:
                       </span>
@@ -215,9 +220,9 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="bg-primary py-20 px-6">
+      <section className="bg-secondary py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-3xl font-bold text-white mb-8">
+          <h3 className="text-2xl md:text-2xl font-bold text-white mb-8">
             Let us know who you&apos;d like to continue the <br /> conversation
             with - we&apos;d love to connect again.
           </h3>
@@ -225,7 +230,7 @@ export default function Home() {
             href="https://www.linkedin.com/company/athgadlang/"
             target="_blank"
             rel="noopener"
-            className="inline-flex items-center bg-secondary hover:bg-secondary text-white hover:text-white px-12 py-4 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center bg-white hover:bg-accent text-secondary hover:text-white px-12 py-4 rounded-full font-bold text-lg md:text-base transion-all duration-300 hover:scale-105"
           >
             <LinkedinIcon className="w-6 h-6 mr-3" />
             Let&apos;s Build Something Together
