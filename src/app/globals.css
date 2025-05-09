@@ -3,8 +3,24 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply text-[0.82em]; /* Base font-size to 90% */
+  }
+
   body {
     @apply antialiased bg-white;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  p {
+    @apply text-base md:text-lg;
   }
 }
 
@@ -15,11 +31,21 @@
 }
 
 @layer utilities {
-  .leading-snug {
-    line-height: 1.375;
+  .scale-90 {
+    transform: scale(0.9);
   }
-  .leading-relaxed {
-    line-height: 1.625;
+  
+  .origin-top {
+    transform-origin: top center;
+  }
+  
+  @media (max-width: 768px) {
+    .scale-90 {
+      transform: scale(1);
+    }
+    html {
+      @apply text-[1em];
+    }
   }
 }
 

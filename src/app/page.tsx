@@ -58,14 +58,14 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white py-6 px-6 flex justify-center items-center border-b border-light">
+      <header className="bg-white py-4 px-6 flex justify-center items-center border-b border-light">
         <div className="flex items-center gap-8">
           <Image
             src="/account-ex.png"
             alt="athGADLANG"
-            width={240}
-            height={72}
-            className="h-14 w-auto"
+            width={368}
+            height={80}
+            className="h-20 w-auto"
             style={{ color: "#133557" }}
           />
         </div>
@@ -96,7 +96,7 @@ export default function Home() {
       {/* Team Grid */}
       <section
         id="strategic-leaders"
-        className="pt-20 px-6 bg-gradient-to-br from-[#e2ecf6] to-[#f0f4f8]"
+        className="py-16 px-6 bg-gradient-to-br from-[#e2ecf6] to-[#f0f4f8]"
       >
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl md:text-3xl font-bold text-center text-secondary mb-2">
@@ -108,13 +108,7 @@ export default function Home() {
             Take It Further.
           </p>
 
-          <div
-            className="flex flex-wrap justify-center gap-8"
-            style={{
-              transform: "scale(0.90)",
-              transformOrigin: "top center",
-            }}
-          >
+          <div className="flex flex-wrap justify-center gap-8">
             {teamMembers.map((member, index) => (
               <div
                 key={index}
@@ -222,7 +216,7 @@ export default function Home() {
       {/* Final CTA */}
       <section className="bg-secondary py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl md:text-2xl font-bold text-white mb-8">
+          <h3 className="text-2xl md:text-2xl font-bold text-white mb-14">
             Let us know who you&apos;d like to continue the <br /> conversation
             with - we&apos;d love to connect again.
           </h3>

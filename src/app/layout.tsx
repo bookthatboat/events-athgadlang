@@ -16,12 +16,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <meta
         name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=5"
+        content="width=device-width, initial-scale=0.9, maximum-scale=0.9, user-scalable=no"
       />
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${inter.className} overflow-x-hidden origin-top`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
